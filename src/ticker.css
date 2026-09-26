@@ -1,0 +1,22 @@
+.ticker > div {
+  animation: ticker-scroll 13s linear infinite;
+  gap: 0;
+  will-change: transform;
+}
+
+.ticker-copy {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding-right: 35px;
+  flex: none;
+}
+
+.ticker:hover > div {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-25%); }
+}
