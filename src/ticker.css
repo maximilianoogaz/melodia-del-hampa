@@ -1,6 +1,7 @@
-.ticker > div {
-  animation: ticker-scroll 13s linear infinite;
+.ticker > .ticker-track {
+  animation: ticker-scroll var(--ticker-duration) linear infinite;
   gap: 0;
+  flex: none;
   will-change: transform;
 }
 
@@ -14,5 +15,12 @@
 
 @keyframes ticker-scroll {
   from { transform: translateX(0); }
-  to { transform: translateX(-25%); }
+  to { transform: translateX(var(--ticker-distance)); }
+}
+
+@media (max-width: 700px) {
+  .ticker-copy {
+    gap: 24px;
+    padding-right: 24px;
+  }
 }
