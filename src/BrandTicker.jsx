@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import BrandStar from './BrandStar';
 
-const PIXELS_PER_SECOND = 40;
+const PIXELS_PER_SECOND = 20;
 
 export default function BrandTicker() {
   const containerRef = useRef(null);
