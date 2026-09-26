@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react';
+import BrandStar from './BrandStar';
 
 const PIXELS_PER_SECOND = 100;
 
@@ -32,9 +33,9 @@ export default function BrandTicker() {
       }}>
         {Array.from({ length: layout.copies }, (_, i) => (
           <div className="ticker-copy" key={i} ref={i === 0 ? copyRef : undefined}>
-            <span>ESTILO PROPIO</span><span className="ticker-star">✳</span>
-            <span>SIN PERMISO</span><span className="ticker-star">✳</span>
-            <span>HECHO EN CHILE</span><span className="ticker-star">✳</span>
+            <span>ESTILO PROPIO</span><span className="ticker-star"><BrandStar /></span>
+            <span>SIN PERMISO</span><span className="ticker-star"><BrandStar /></span>
+            <span>HECHO EN CHILE</span><span className="ticker-star"><BrandStar /></span>
           </div>
         ))}
       </div>
